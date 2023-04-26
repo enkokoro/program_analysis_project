@@ -1,0 +1,16 @@
+# Import from the triangle.py file
+@import triangle as module
+
+# A line beginning with an @ is just python code.
+
+pool: <int> 3
+pool: <str> 1
+
+# A pool is a set of values we'll produce and use in testing.
+# We need some integers, and we'll let TSTL produce up to 5 of them.
+# The name is a variable name, basically, but often will be like a
+# type name, showing how the value is used.
+
+<str> := module.triangle(<int>, <int>, <int>)
+
+property: <str> in ["Equilateral triangle", "Isosceles triangle", "Scalene triangle"]

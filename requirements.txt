@@ -1,0 +1,6 @@
+pynguin
+deal[all]
+tstl
+crosshair-tool
+klara
+auger-python
