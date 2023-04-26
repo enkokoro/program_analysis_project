@@ -1,0 +1,4 @@
+# Python Stuff
+lib64
+__pycache__/
+venv/
