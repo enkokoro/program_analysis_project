@@ -44,7 +44,11 @@ Two key questions I have for you to think about/contend with: (1) which shared p
 
 # Structure of example
 triangle/
+
 |- triangle.py: base version of file that you want to generate test cases for
+
 |- triangle_*.py: modified versions to work with different tools
+
 |- tests/
+
     |- test_triangle.py: test cases
