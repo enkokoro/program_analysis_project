@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/add_bug1
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 2 items
+
+tests/pynguin/test_add_bug1.py x                                         [ 50%]
+tests/pynguin/test_add_bug1_types.py x                                   [100%]
+
+============================= 2 xfailed in 11.29s ==============================

@@ -1,0 +1,54 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/add_bug1
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 1 item
+
+tests/deal/test_add_bug1_types.py F                                      [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_add_bug1 _________________________________
+
+    @deal.cases(module.add)
+>   def test_add_bug1(case: deal.TestCase) -> None:
+
+tests/deal/test_add_bug1_types.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/deal/test_add_bug1_types.py:6: in test_add_bug1
+    case()
+../../venv/lib/python3.10/site-packages/deal/_runtime/_contracts.py:87: in wrapper
+    return contracts._run_sync(args, kwargs)
+../../venv/lib/python3.10/site-packages/deal/_runtime/_contracts.py:148: in _run_sync
+    validator.validate(args, dict(kwargs, result=result))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <deal._runtime._validators.Validator object at 0x7f0bd5a6be20>, args = ()
+kwargs = {'a': 0, 'b': 1, 'result': -1}, exc = None
+
+    def _short_validation(self, args: Args, kwargs: Kwargs, exc=None) -> None:
+        """Validate contract using short validator.
+    
+        Short validator is a function that has a short signature
+        (accepts only one `_` argument).
+        """
+        params = _args_to_vars(
+            args=args,
+            kwargs=kwargs,
+            signature=self.signature,
+            keep_result=False,
+        )
+        validation_result = self.validator(AttrDict(params))
+        # is invalid (validator returns error message)
+        if type(validation_result) is str:
+            raise self._exception(message=validation_result, params=params) from exc
+        # is valid (truely result)
+        if validation_result:
+            return
+        # is invalid (falsy result)
+>       raise self._exception(params=params) from exc
+E       deal.PostContractError: expected result == a + b[37m[39;49;00m (where [94ma[0m=[95m0[0m, [94mb[0m=[95m1[0m, [94mresult[0m=[95m-1[0m)
+
+../../venv/lib/python3.10/site-packages/deal/_runtime/_validators.py:239: PostContractError
+=========================== short test summary info ============================
+FAILED tests/deal/test_add_bug1_types.py::test_add_bug1 - deal.PostContractError: expected result == a + b[37m[39;49;00m (where [94ma[0m=[95m0[0m, [94mb[0m=[95m1[0m, [94mresult[0m=[95m-1[0m)
+============================== 1 failed in 35.65s ==============================

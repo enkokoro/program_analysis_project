@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/add_bug3
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 1 item
+
+tests/auger/test_add_bug3.py .                                           [100%]
+
+============================== 1 passed in 0.25s ===============================

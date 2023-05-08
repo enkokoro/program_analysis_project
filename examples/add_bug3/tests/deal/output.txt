@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/add_bug3
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 1 item
+
+tests/deal/test_add_bug3_types.py F                                      [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_add_bug3 _________________________________
+
+    @deal.cases(module.add)
+>   def test_add_bug3(case: deal.TestCase) -> None:
+
+tests/deal/test_add_bug3_types.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/deal/test_add_bug3_types.py:6: in test_add_bug3
+    case()
+../../venv/lib/python3.10/site-packages/deal/_runtime/_contracts.py:87: in wrapper
+    return contracts._run_sync(args, kwargs)
+../../venv/lib/python3.10/site-packages/deal/_runtime/_contracts.py:127: in _run_sync
+    result = self.func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 0, b = 0
+
+    @deal.ensure(lambda _: _.result == _.a + _.b)
+    def add(a: int, b: int)-> int:
+>       return (a * b + b * b)//b
+E       ZeroDivisionError: integer division or modulo by zero
+
+add_bug3_types.py:5: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tests/deal/test_add_bug3_types.py::test_add_bug3 - ZeroDivisionError: ...
+============================== 1 failed in 29.05s ==============================

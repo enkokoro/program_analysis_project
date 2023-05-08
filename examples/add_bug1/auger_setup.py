@@ -1,8 +1,8 @@
 import auger
-import triangle as module
+import add_bug1 as module
 def main():
 	# TODO: replace with invocation of function
-	module.triangle(3, 4, 5)
+	module.add(1, 3)
 if __name__ == '__main__':
 	with auger.magic([module]):
 		main()

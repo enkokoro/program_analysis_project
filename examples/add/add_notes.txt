@@ -1,0 +1,10 @@
+python3 -m pytest tests/auger 
+
+bug1
+substitution for -
+
+bug2
+special case failure for a == b case
+
+bug3
+fails on b == 0
