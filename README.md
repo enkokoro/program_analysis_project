@@ -1,42 +1,12 @@
-# List of Automatic Test Generation Tools
-pynguin: https://pynguin.readthedocs.io/en/latest/user/quickstart.html 
-- pip install pynguin
-- pynguin \
-    --project-path ./docs/source/_static \
-    --output-path /tmp/pynguin-results \
-    --module-name example 
-- requires environment variable PYNGUIN_DANGER_AWARE set to continue - run in container for safety unless you know that the code you run is safe (export PYNGUIN_DANGER_AWARE=true)
-- python3 -m pytest tests/pynguin
+# Program Analysis Project
+Reviewing Automatic Test Generation Tools (Auger, Deal, Klara, Pynguin)
 
-deal: https://deal.readthedocs.io/details/examples.html
-- python3 -m pip install --user 'deal[all]'
-- annotate file with deal contracts
-- python3 -m pytest tests/deal
-
-~~TSTL: https://github.com/agroce/tstl~~
-- pip install tstl
-- tstl tests/tstl/triangle.tstl
-- tstl_rt --timeout 30 
-- [having trouble figuring out how to work]
-
-~~CrossHair: https://crosshair.readthedocs.io/en/latest/get_started.html~~
-- pip install crosshair-tool
-- crosshair watch [directory with code to analyze]
-- [having trouble figuring out how to work]
-
-Klara: https://klara-py.readthedocs.io/en/latest/introduction.html
-- pip install klara
-- klara source.py
-
-Auger: https://github.com/laffra/auger
-- pip install auger-python
-- annotate file to run main in auger.magic
-- python3 python_file.py
+See ``Project_Proposal.pdf``, ``Project_Checkpoint.pdf`` and ``Project_Final.pdf`` for more information on the project.
 
 # Steps to run
 1. Create virtual environment with requirements.txt and use it from within the final project directory
         
-    ``python -m venv venv`` (or whatever path desired)
+    ``python2 -m venv venv`` (or whatever path desired)
         
     ``source venv/bin/activate``
 
@@ -92,4 +62,37 @@ Auger: https://github.com/laffra/auger
 Outputs can then be viewed at ``examples/foo/tests/tool/output.txt``
 
 
+# List of Automatic Test Generation Tools
+pynguin: https://pynguin.readthedocs.io/en/latest/user/quickstart.html 
+- pip install pynguin
+- pynguin \
+    --project-path ./docs/source/_static \
+    --output-path /tmp/pynguin-results \
+    --module-name example 
+- requires environment variable PYNGUIN_DANGER_AWARE set to continue - run in container for safety unless you know that the code you run is safe (export PYNGUIN_DANGER_AWARE=true)
+- python3 -m pytest tests/pynguin
 
+deal: https://deal.readthedocs.io/details/examples.html
+- python3 -m pip install --user 'deal[all]'
+- annotate file with deal contracts
+- python3 -m pytest tests/deal
+
+~~TSTL: https://github.com/agroce/tstl~~
+- pip install tstl
+- tstl tests/tstl/triangle.tstl
+- tstl_rt --timeout 30 
+- [having trouble figuring out how to work]
+
+~~CrossHair: https://crosshair.readthedocs.io/en/latest/get_started.html~~
+- pip install crosshair-tool
+- crosshair watch [directory with code to analyze]
+- [having trouble figuring out how to work]
+
+Klara: https://klara-py.readthedocs.io/en/latest/introduction.html
+- pip install klara
+- klara source.py
+
+Auger: https://github.com/laffra/auger
+- pip install auger-python
+- annotate file to run main in auger.magic
+- python3 python_file.py
