@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/queue
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 0 items / 2 errors
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/deal/test_queue_deal.py ________________
+ImportError while importing test module '/mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/queue/tests/deal/test_queue_deal.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/deal/test_queue_deal.py:2: in <module>
+    import queue_deal as module
+E   ModuleNotFoundError: No module named 'queue_deal'
+_______________ ERROR collecting tests/deal/test_queue_types.py ________________
+tests/deal/test_queue_types.py:4: in <module>
+    @deal.cases(module.queue)
+E   AttributeError: module 'queue_types' has no attribute 'queue'. Did you mean: 'Queue'?
+=========================== short test summary info ============================
+ERROR tests/deal/test_queue_deal.py
+ERROR tests/deal/test_queue_types.py - AttributeError: module 'queue_types' h...
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 2 errors in 12.08s ==============================

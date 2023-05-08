@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/count
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 2 items
+
+tests/deal/test_count_deal.py .                                          [ 50%]
+tests/deal/test_count_types.py .                                         [100%]
+
+============================== 2 passed in 13.61s ==============================

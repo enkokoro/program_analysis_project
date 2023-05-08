@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/choice
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 2 items
+
+tests/pynguin/test_choice.py F                                           [ 50%]
+tests/pynguin/test_choice_types.py F                                     [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_case_0 __________________________________
+
+    def test_case_0():
+        bool_0 = True
+>       module_0.choice(bool_0)
+
+tests/pynguin/test_choice.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+choice.py:6: in choice
+    return random.choice(items)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <random.Random object at 0x55fe6799c850>, seq = True
+
+    def choice(self, seq):
+        """Choose a random element from a non-empty sequence."""
+        # raises IndexError if seq is empty
+>       return seq[self._randbelow(len(seq))]
+E       TypeError: object of type 'bool' has no len()
+
+/usr/lib/python3.10/random.py:378: TypeError
+_________________________________ test_case_0 __________________________________
+
+    def test_case_0():
+        object_0 = module_0.object()
+>       module_1.choice(object_0)
+
+tests/pynguin/test_choice_types.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+choice_types.py:7: in choice
+    return random.choice(items)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <random.Random object at 0x55fe6799c850>
+seq = <object object at 0x7fea57a1d8f0>
+
+    def choice(self, seq):
+        """Choose a random element from a non-empty sequence."""
+        # raises IndexError if seq is empty
+>       return seq[self._randbelow(len(seq))]
+E       TypeError: object of type 'object' has no len()
+
+/usr/lib/python3.10/random.py:378: TypeError
+=========================== short test summary info ============================
+FAILED tests/pynguin/test_choice.py::test_case_0 - TypeError: object of type ...
+FAILED tests/pynguin/test_choice_types.py::test_case_0 - TypeError: object of...
+============================== 2 failed in 5.30s ===============================

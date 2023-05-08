@@ -46,10 +46,12 @@ Two key questions I have for you to think about/contend with: (1) which shared p
 ```
 project/
 │   README.md 
-└───triangle/
-│   │   triangle.py: base version of file that you want to generate test cases for
-│   │   triangle_*.py: modified versions to work with different tools
-│   └───tests/
-│       └─── (tool)/: subfolders corresponding to each tool
-│       │       test_triangle.py: generated or created test files from the tool it belongs to
+└───examples/
+|   └───module/
+│       │   module.py: base version of file that you want to generate test cases for
+│       │   module_types.py: type annotated version
+|       |   module_deal.py: deal annotated version
+│       └───tests/
+│           └─── (tool)/: subfolders corresponding to each tool
+│                 │       test_module.py: generated or created test files from the tool it belongs to
 ```

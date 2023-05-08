@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/triangle
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 1 item
+
+tests/klara/test_triangle_types.py .                                     [100%]
+
+============================== 1 passed in 0.26s ===============================

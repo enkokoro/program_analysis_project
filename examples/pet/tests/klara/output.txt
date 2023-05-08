@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/pet
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 0 items
+
+============================ no tests ran in 0.26s =============================

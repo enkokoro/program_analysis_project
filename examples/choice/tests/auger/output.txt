@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/choice
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 1 item
+
+tests/auger/test_choice.py F                                             [100%]
+
+=================================== FAILURES ===================================
+____________________________ ChoiceTest.test_choice ____________________________
+
+self = <test_choice.ChoiceTest testMethod=test_choice>
+mock_choice = <MagicMock name='choice' id='139929883996752'>
+
+    @patch.object(Random, 'choice')
+    def test_choice(self, mock_choice):
+        mock_choice.return_value = 5
+>       self.assertEqual(
+            choice.choice(items=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+            5
+        )
+E       AssertionError: 10 != 5
+
+tests/auger/test_choice.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tests/auger/test_choice.py::ChoiceTest::test_choice - AssertionError: ...
+============================== 1 failed in 5.73s ===============================

@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: /mnt/c/Users/evely/OneDrive/Documents/ProgramAnalysis/program-analysis-final-project/examples/choice
+plugins: hypothesis-6.74.0, typeguard-3.0.2
+collected 2 items
+
+tests/deal/test_choice_deal.py .                                         [ 50%]
+tests/deal/test_choice_types.py F                                        [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_choice __________________________________
+
+    @deal.cases(module.choice)
+>   def test_choice(case: deal.TestCase) -> None:
+
+tests/deal/test_choice_types.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/deal/test_choice_types.py:6: in test_choice
+    case()
+choice_types.py:7: in choice
+    return random.choice(items)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <random.Random object at 0x55a605c25850>, seq = []
+
+    def choice(self, seq):
+        """Choose a random element from a non-empty sequence."""
+        # raises IndexError if seq is empty
+>       return seq[self._randbelow(len(seq))]
+E       IndexError: list index out of range
+
+/usr/lib/python3.10/random.py:378: IndexError
+=========================== short test summary info ============================
+FAILED tests/deal/test_choice_types.py::test_choice - IndexError: list index ...
+========================= 1 failed, 1 passed in 27.55s =========================
