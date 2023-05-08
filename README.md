@@ -89,5 +89,7 @@ Auger: https://github.com/laffra/auger
 
     ``./run_test_cases.sh foo``
 
+Outputs can then be viewed at ``examples/foo/tests/tool/output.txt``
+
 
 
